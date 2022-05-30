@@ -21,11 +21,9 @@ const HomeScreen = () => {
                     }}
                 ></Image>
 
-                    // Google Search & Api
+                    
                 <GooglePlacesAutocomplete>
-                      placeholder="Where from"
-                      nearbyPlacesAPI="GoolePlacesSearch"
-                      debounce={400}
+
                 </GooglePlacesAutocomplete>
 
                 <NavOptions></NavOptions>
