@@ -41,7 +41,7 @@ const origin = useSelector(selectOrigin);
         renderItem={({ item }) => (
             <TouchableOpacity
             onPress={() => navigation.navigate(item.screen)}
-            style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-1 w-30`}
+            style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-1 w-30 rounded-md`}
             disabled={!origin}
             >
             
