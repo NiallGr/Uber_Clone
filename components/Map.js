@@ -13,11 +13,11 @@ const Map = () => {
   const mapRef = useRef(null);
 
   useEffect(() => {
-      if(!origin || destination) return;
+      if(!origin || !destination) return;
 
-      // zoom & fit to makers 
+    
       mapRef.current.fitToSuppliedMarkers(['origin', 'destination'], {
-        edgePadding: { top: 50, right: 50, bottom: 50, left: 50 }
+        edgePadding: { top: 50, right: 50, bottom: 50, left: 50 },
       });
   }, [origin, destination]);
 
@@ -50,7 +50,7 @@ const Map = () => {
           latitude: origin.location.lat,
           longitude: origin.location.lng,
         }}
-        title='Your starting point'
+        title='Origin'
         description={origin.description}
         identifier="origin"
       />
