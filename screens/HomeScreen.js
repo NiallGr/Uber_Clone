@@ -19,6 +19,7 @@ const HomeScreen = () => {
             <View style={tw`p-5`}>
                 <Image
                     style={{
+                        marginTop: 10,
                         width: 100,
                         height: 100,
                         resizeMode: 'contain',
