@@ -66,8 +66,9 @@ const HomeScreen = () => {
                 ></GooglePlacesAutocomplete>
 
                 <NavOptions></NavOptions>
-                <NavFavourites></NavFavourites>
+              
             </View>
+            <NavFavourites/>
     </SafeAreaView>
   )
 }
