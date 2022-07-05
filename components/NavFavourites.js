@@ -12,17 +12,31 @@ const data = [
         destination: "Brentwood, Burnaby, Canada"
     },
     {
+        id: "532",
+        icon: "home",
+        location: "Family",
+        destination: "Torrevieja, Alicante, Spain"
+    },
+    {
         id: "456",
         icon: "briefcase",
         location: "Work",
-        destination: "Activision, London, UK"
+        destination: "DeveloperCycle, London, UK"
     },
     {
         id: "342",
         icon: "restaurant",
         location: "Restaurant",
-        destination: "Sushi California, urquitlam, Canada"
+        destination: "Sushi California, Burquitlam, Canada"
+        
     },
+    {
+        id: "343",
+        icon: "restaurant",
+        location: "Restaurant",
+        destination: "Big Chief, London, UK"
+    },
+  
     
 ];
 
