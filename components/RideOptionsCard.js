@@ -5,6 +5,9 @@ import { Icon } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
 import { selectTravelTimeInformation } from '../slices/navSlice';
 import { useSelector } from 'react-redux';
+import "intl";
+
+import "intl/locale-data/jsonp/en"
 
 
 
@@ -49,7 +52,7 @@ const RideOptionsCard = () => {
             <Icon name='chevron-left' type='fontawesome' />
         </TouchableOpacity>
      
-      <Text style={tw`text-center py-5 text-xl`}>Select a ride - {travelTimeInformation?.distance.text}</Text>
+      <Text style={tw`text-center py-5 text-xl`}>Select a ride - {travelTimeInformation?.distance?.text}</Text>
       </View>
 
       <FlatList data={data}
@@ -68,11 +71,11 @@ const RideOptionsCard = () => {
             />
             <View style={tw`-ml-6`}>
               <Text style={tw`text-xl font-semibold`}>{title}</Text>
-              <Text>{travelTimeInformation?.duration.text} </Text>
+              <Text>{travelTimeInformation?.duration?.text} </Text>
             </View>
             <Text style={tw`text-xl`}>
               
-                {/* {new Intl.NumberFormat("en-gb", {
+                {new Intl.NumberFormat("en-gb", {
                   style: 'currency',
                   currency: "GBP",
 
@@ -81,14 +84,14 @@ const RideOptionsCard = () => {
                      SURGE_CHARGE_RATE *
                       multiplier) / 
                       100
-                )}= */}
+                )}
 
             </Text>
           </TouchableOpacity>
 
       )} 
       />
-      <View>
+      <View style={tw`mt-auto border-t border-gray-200`}>
         <TouchableOpacity disabled={!selected} style={tw`bg-black py-3 m-3 ${!selected && "bg-gray-200"}`}
         >
               <Text style={tw`text-center text-white text-xl`}>Choose {selected?.title}</Text>
